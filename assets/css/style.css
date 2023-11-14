@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+.container {
+  display: flex;
+}
+
+:root {
+  --bg-color-scrollbar: #98c7e0;
+  --bg-color-thumb: royalblue;
+  --width-scrollbar: 0.2rem;
+  --border-radius--scrollbar: 20px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0;
+  }
+
+  #header__image img {
+    display: none;
+  }
+
+  #planos {
+    grid-template-columns: repeat(3, 100%) !important;
+    grid-auto-flow: column;
+    overflow: auto hidden;
+  }
+
+  #precos {
+    grid-template-columns: repeat(3, 100%) !important;
+    grid-auto-flow: column;
+    overflow: auto hidden;
+  }
+}
+
+/* Scroll Bar */
+body::-webkit-scrollbar, #planos::-webkit-scrollbar, #precos::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track, #planos::-webkit-scrollbar-track, #precos::-webkit-scrollbar-track {
+  background-color: #98c7e0;
+}
+body::-webkit-scrollbar-thumb, #planos::-webkit-scrollbar-thumb, #precos::-webkit-scrollbar-thumb {
+  background: royalblue;
+  border-radius: 20px;
+}
+
+
+ /* Nav Bar */
+
+ nav {
+  justify-content: center;
+  align-items: center;
+  background: #ade2ff;
+  font-size: 1.25rem;
+  padding: 32px;
+  gap: 128px;
+}
+
+/* Header */
+
+#header {
+  background: #ade2ff;
+  justify-content: space-between;
+}
+
+section,
+#header {
+  max-height: 720px;
+}
+
+#header__container {
+  margin: auto;
+  padding: 10%;
+}
+
+#header__container p {
+  font-size: 3rem;
+  max-width: 370px;
+  margin-bottom: 16px;
+}
+
+#header__button {
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(223, 47%, 63%);
+  border: none;
+  background-color: #ade2ff;
+  cursor: pointer;
+}
+
+#header__image {
+  text-align: end;
+  align-self: self-end;
+}
+
+#header__image img {
+  height: 100%;
+}
+
+main {
+  flex-direction: column;
+}
+
+/* 2º Section */
+
+#planos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
+  align-items: center;
+  padding: 4.5%;
+}
+.planos__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: start;
+  align-items: center;
+}
+
+.planos__cards img {
+  margin: auto;
+}
+
+.planos__cards p {
+  color: #c4c4c4;
+  max-width: 220px;
+  font-size: 1.25rem;
+}
+
+.planos__cards h1 {
+  color: #70cdff;
+  font-size: 2.5rem;
+}
+
+/* 3º section */
+
+#precos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #ade2ff;
+  justify-items: center;
+  text-align: center;
+  gap: 24px;
+  padding: 4.5%;
+  scroll-margin-top: -40px;
+}
+
+#precos h1 {
+  font-size: 3rem;
+}
+
+.preco__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preco__card--valor,
+.preco__card ul {
+  text-align: center;
+}
+
+.preco__card ul {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.preco__card ul li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.preco__card ul li::before {
+  content: url(../img/Vectorpaw.png);
+  padding: 5px;
+}
